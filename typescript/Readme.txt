@@ -1,7 +1,17 @@
-tsc app (sem necessidade de .ts) gera o arquivo .js com versão par ecma5
+Comando Terminal : tsc app 
+(sem necessidade de .ts) faz o trasnpiler do arquivo ts para o arquivo .js.
 
-tsc -init - cria o arquivo de configurações para o tsc
+Comando Terminal : tsc -init 
+cria o arquivo de configuraÃ§Ãµes para o tsc
+-> pode-se fazer uma series de configuraÃ§Ãµes ao executar o transpiler, como dizer para qual versÃ£o do js 
+serÃ¡ feito. Ex: ECMA 6
+-> configuraÃ§Ã£o -> outDir -> informar diretorio onde serÃ£o criados os arquivos js por padrÃ£o ele cria
+junto com o arquivo origem
 
-configuração -> outDir -> informar diretorio onde serão criados os arquivos.
+Comando Terminal : tsc -w
+ Fazer o transpiler ficar assistindo as alterÃ§Ãµes dos arquivos td e faz transpiler para js 
+em tempo real.
 
-tsc -w - fazer o transpiler ficar assistindo as alterções e já executa o transpiler em tempo real.
+Os exemplos em si ensinam as novidades do Ecma 6, 
+sobre o typeScript que Ã© a possibilidade de tipagem de variaveis no javascript,
+e sobre os conceitos de orientaÃ§Ã£o a Objeto aplicados ao javascript.
