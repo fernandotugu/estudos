@@ -2,21 +2,12 @@
 
 Conceito de single page aplication ou mais conhecido como spa, ou seja a pagina é carregada uma unica vez, e toda a navegação de novas páginas não há requisição de novas páfinas ao servidor, somente terão requisições a api's de dados.
 
-Versões do angular
+Versões usada do cli: @angular/cli@1.2.6 
 
-╠════════════════════════════╬════════════════════════════╬
-║ Angular-CLI version        ║ Angular version            ║
-╠════════════════════════════╬════════════════════════════╣
-║ @angular/cli@1.1.0         ║ Angular 4.0.0              ║
-╠════════════════════════════╬════════════════════════════╣
-║ @angular/cli@1.4.10        ║ Angular 4.2.4              ║
-╠════════════════════════════╬════════════════════════════╣
-║ @angular/cli@1.5.0         ║ Angular 4.4                ║
-╠════════════════════════════╬════════════════════════════╣
 
 Provalvemente se for usar instalar a versão padrão do angular sempre pegara a versão atual, para pegar a versão do curso foi instalada a versão 4.0.0
 
-Comando Prompt : npm install -g @angular/cli@1.1.0 
+Comando Prompt : npm install -g @angular/cli@1.2.6 
 
 
 Criando o projeto
@@ -79,6 +70,21 @@ ngAfterConentChecked
 ngAfterViewInit
 bgAfterViewChecked
 ngOnDestroy
- 
+---
+
+build e deploy
+
+ng build - gera com arquivos .map
+
+ng build --dev gera o build de desenvolvimento
+
+ng build --prod --aot=false -> gera o build de produção com hashs nos arquivos para evitar problemas de cache em produção.
+
+----
+
+colocar os arquivos da pasta dist em um servidor http
+
+
+
 
 
