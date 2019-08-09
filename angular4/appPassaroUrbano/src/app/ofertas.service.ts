@@ -1,8 +1,13 @@
 import Oferta from './shared/oferta.model';
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
+@Injectable()
 export default class OfertasService{
 
-    public ofertas: Oferta[] = [
+    constructor( private http: Http()){}
+
+/*    public ofertas: Oferta[] = [
         {
             id: 1,
             categoria: "restaurante",
@@ -51,16 +56,40 @@ export default class OfertasService{
                 {url: "/assets/ofertas/3/img6.jpg"}
             ]
         }
-    ]
+    ]*/
 
-    public getOfertas(): Oferta[]{
+    public getOfertas(): Promise<Oferta[]>{
         return this.ofertas;
     }
 
-    public getOfertas2(): Promise<Oferta[]>{
-        return new Promise( (resolve,reject)=>{
-            resolve(this.ofertas)
-        })
+   /* public getOfertas(): Oferta[]{
+        return this.ofertas;
     }
-
+*/
+    /*public getOfertas2(): Promise<Oferta[]>{
+        return new Promise( (resolve,reject)=>{
+            let  deu_certo =  true;
+            if(deu_certo){
+                setTimeout(()=>resolve(this.ofertas),3000)
+                //resolve(this.ofertas)
+            }
+            else{
+                reject({codigo_erro:404, mensagem_erro:"Pagina não encontrada xyz"})
+            }
+        }).then((ofertas: Oferta[])=>{
+            console.log('primeiro then');
+            return ofertas;
+        })
+        .then((ofertas: Oferta[])=>{
+            console.log('segundo then');
+            return new Promise( (resolve2,reject2)=>{
+                setTimeout(()=>resolve2(ofertas),3000)
+            } );
+        })
+        .then(( ofertas: Oferta[]) =>{
+            console.log('terceiro then executado após 3 segundos porque estava aguardando a promisse');
+          return ofertas;  
+        });
+    }*/
+ 
 }
