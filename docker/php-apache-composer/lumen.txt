@@ -1,0 +1,4 @@
+composer global require "laravel/lumen-installer"
+
+composer create-project --prefer-dist laravel/lumen nomeprojeto
+composer create-project --prefer-dist laravel/lumen . (Instala na raiz)

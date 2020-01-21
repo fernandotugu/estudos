@@ -1,0 +1,7 @@
+cp .env.dist .env
+docker-compose build
+docker-compose up -d
+docker exec -u dev -it php_web bash
+
+
+origem : https://github.com/rezsolt/docker-php-apache-mysql-composer
