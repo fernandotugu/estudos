@@ -1,0 +1,53 @@
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$versao = '1';
+$clientId = '7040d9b1-601a-4c9a-b3a2-2a58358a48dd';
+$secret = 'wI6vV1eU2mH7lL5aJ8dH0vG5tK0hV4eT2dY3wE6mP3fG4sI2dM';
+$certificado = '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';
+
+
+$headers = array(
+    'Content-Type: application/json',
+    'x-api-version :'.$versao,
+    'x-ibm-client-id :'.$clientId,
+    'x-ibm-client-secret :'.$secret,
+    'x-client-certificate :'.$certificado,
+);
+
+// query string
+$fields = array(
+    'cnpj' => '11111111',
+    'dataBase' => '201912'
+);
+
+$url = 'https://gw.apiconnect.fgc.org.br/fgc/if-censo/api/censo-if/consultaresultadocenso?';
+//$url = 'https://apihmg.fgc.org.br/api/censo-if/consultaresultadocenso?';
+//$url = 'https://localhost:8090/api/state';
+$url .= http_build_query($fields);
+
+// Open connection
+$ch = curl_init();
+
+// Set the url, number of GET vars, GET data
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, false);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
+
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+// Execute request
+$result = curl_exec($ch);
+
+// Close connection
+curl_close($ch);
+
+// get the result and parse to JSON
+$result_arr = json_decode($result, true);
+
+echo '<pre>';
+print_r($result_arr);

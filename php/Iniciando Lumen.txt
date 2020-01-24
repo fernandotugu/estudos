@@ -1,0 +1,6 @@
+Caso não configurado de forma global
+
+composer global require "laravel/lumen-installer=~1.0"
+
+
+lumen new auth-app

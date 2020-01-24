@@ -2,3 +2,41 @@ composer global require "laravel/lumen-installer"
 
 composer create-project --prefer-dist laravel/lumen nomeprojeto
 composer create-project --prefer-dist laravel/lumen . (Instala na raiz)
+
+ou 
+
+lumen new auth-app
+cd auth-app
+
+
+Habilite Eloquent
+
+Para habilitar Eloquent, precisamos editar o arquivo bootstrap/app.php e remover o comentário sobre as seguintes linhas:
+
+$app->withFacades();
+$app->withEloquent();
+
+
+Configure a conexão de banco de dados
+
+.env
+
+DB_CONNECTION=mysql  
+DB_HOST=localhost  
+DB_DATABASE=homestead  
+DB_USERNAME=homestead  
+DB_PASSWORD=secret
+
+
+criação da tabela de migrations
+
+php artisan migrate:install
+
+
+Migrations (Criar quantas necessarias)
+
+php artisan make:migration create_users_table --create=users
+
+Criar Tabelas
+
+php artisan migrate
